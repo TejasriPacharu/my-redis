@@ -21,3 +21,7 @@ Classes:
 => RedisServer class
 => RedisDatabase class
 => RedisCommandHandler class  - to handle the commands that are coming from the clients
+   It parses the user input commands into RESP format
+
+
+=> RESP = Redis Serialization Protocol Specification
