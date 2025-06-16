@@ -3,6 +3,7 @@
 #include <vector>
 #include <sstream>
 #include <algorithm>
+#include <iostream>
 
 //Redis uses the RESP protocol for redis client server communication
 // There are two types of parsing strings in redis => simple strings, bulk strings
@@ -84,6 +85,9 @@ std::string RedisCommandHandler::processCommand(const std::string& commandLine) 
         return "Error: empty command \r\n";
     }
 
+    for(auto& t:tokens)  {
+        std:: cout << t << std::endl;
+    }
     std::string cmd = tokens[0];
     std::transform(cmd.begin(), cmd.end(), cmd.begin(), :: toupper);
 
